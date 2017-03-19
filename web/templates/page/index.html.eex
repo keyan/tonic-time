@@ -1,0 +1,3 @@
+<div id="clock" class="jumbotron">
+  <h2><%= @time_now %></h2>
+</div>
