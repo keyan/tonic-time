@@ -19,5 +19,7 @@ RUN mix deps.get
 
 COPY . /$APP_NAME
 RUN npm install && node node_modules/brunch/bin/brunch build
+RUN MIX_ENV=prod mix phoenix.digest
+RUN MIX_ENV=prod mix compile
 
-CMD mix phoenix.server
+CMD MIX_ENV=prod mix phoenix.server

@@ -3,7 +3,7 @@ import {Socket} from "phoenix"
 
 let container = document.getElementById("clock")
 
-let socket = new Socket("/socket")
+let socket = new Socket("/time/socket")
 socket.connect()
 
 let timeChannel = socket.channel("time:now")
